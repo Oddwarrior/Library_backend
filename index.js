@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { signup, login } = require('./src/Routes/Auth')
+const bookRoute = require('./src/Routes/bookRoute')
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.use(express.json());
 //routes 
 app.post('/api/signup', signup);
 app.post('/api/login', login);
+app.use('/api/books', bookRoute)
 app.use('/', (req, res) => {
     res.send("Welcome to library!");
 });

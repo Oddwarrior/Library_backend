@@ -25,3 +25,18 @@ Content-Type: application/json
   "username": "testuser2",
   "password": "pass"
 }
+
+### create book 
+
+POST http://localhost:5000/api/books/create
+Content-Type: application/json
+
+{
+"title": "The Great Gatsbys",
+"author": "F. Scott Fitzgerald",
+"isbn": "978123456789s0"
+}
+
+### search book
+GET http://localhost:5000/api/books?title=The%20Great%20Gatsbys
+
