@@ -1,0 +1,27 @@
+# get all users
+GET http://localhost:5000/api/user/all
+
+
+### get user
+GET http://localhost:5000/api/user/4
+
+
+### signup
+POST http://localhost:5000/api/signup
+Content-Type: application/json
+
+{
+  "username": "testuser2",
+  "password": "pass",
+  "email": "testemail",
+  "admin" : "false"
+}
+
+### login
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+  "username": "testuser2",
+  "password": "pass"
+}
