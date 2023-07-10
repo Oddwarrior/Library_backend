@@ -40,3 +40,14 @@ Content-Type: application/json
 ### search book
 GET http://localhost:5000/api/books?title=The%20Great%20Gatsbys
 
+
+### borrow
+POST http://localhost:5000/api/books/borrow
+Content-Type: application/json
+
+{
+"book_id": "1",
+"user_id": "2",
+"issue_time": "2023-01-02T12:00:00Z",
+"return_time": "2023-01-02T12:00:00Z"
+}
